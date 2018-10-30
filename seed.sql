@@ -72,14 +72,14 @@ CREATE TABLE "group_members" (
   "student_id" INT REFERENCES users(id)
 );
 
--- add committee table
+
 
 CREATE TABLE "committee_members" (
   "id" SERIAL PRIMARY KEY,
   "faculty_id" INT REFERENCES users(id)
 );
 
--- add thesis table
+
 
 CREATE TYPE current_stage AS ENUM ('none', 'mor', 'dp1', 'dp2');
 
@@ -109,21 +109,6 @@ CREATE TABLE "members_done" (
   "committee_id" INT REFERENCES users(id)
 );
 
--- DROP TABLE committee_approval CASCADE;
--- DROP TABLE members_done CASCADE;
--- CREATE TYPE defense_type AS ENUM ('MOR', 'DP1', 'DP2');
--- CREATE TYPE status AS ENUM ('failed, passed')
--- CREATE TABLE "defense" (
---   "id" SERIAL PRIMARY KEY
---   "thesis_id" INT REFERENCES thesis(id),
---   "defense_type" defense_type default 'MOR' NOT NULL
---   "status"
--- );
--- ALTER TABLE thesis DROP COLUMN for_defense;
--- CREATE TYPE current_stage AS ENUM ('none', 'mor', 'dp1', 'dp2');
--- ALTER TABLE thesis ADD COLUMN current_stage current_stage default 'none' NOT NULL;
--- ALTER TABLE groups ADD COLUMN thesis_id INT REFERENCES thesis(id);
--- ALTER TABLE defense_grades ADD COLUMN defense_id INT REFERENCES defense(id);
 ALTER TABLE defense ADD COLUMN schedule VARCHAR(250); ***
 
 CREATE TABLE "panel" (
