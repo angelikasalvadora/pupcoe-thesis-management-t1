@@ -8,6 +8,8 @@ const Thesis = require('./../models/thesis');
 const Defense = require('./../models/defense');
 
 /* GET home page. */
+
+/* Final Project */
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated() && req.user.is_admin) {
     res.render('admin/home', { layout: 'admin' });
@@ -26,7 +28,7 @@ router.get('/faculties', function(req, res, next) {
   } else {
     res.redirect('/')
   }
-}); 
+});
 
 router.get('/faculty-create', function(req, res, next) {
   if (req.isAuthenticated() && req.user.is_admin) {
@@ -146,7 +148,7 @@ router.get('/committee', function(req, res, next) {
   } else {
     res.redirect('/')
   }
-}); 
+});
 
 router.post('/committee/remove-member/:facultyId', function(req, res, next) {
   if (req.isAuthenticated() && req.user.is_admin) {
@@ -381,7 +383,7 @@ router.get('/mor/details/:defenseId', function(req, res, next) {
             });
           });
       });
-  } else {  
+  } else {
     res.redirect('/')
   }
 });
@@ -555,7 +557,7 @@ router.get('/dp1/details/:defenseId', function(req, res, next) {
             });
           });
       });
-  } else {  
+  } else {
     res.redirect('/')
   }
 });
@@ -731,7 +733,7 @@ router.get('/dp2/details/:defenseId', function(req, res, next) {
             });
           });
       });
-  } else {  
+  } else {
     res.redirect('/')
   }
 });

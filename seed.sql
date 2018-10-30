@@ -1,3 +1,4 @@
+/* Final Project */
 CREATE TYPE user_type AS ENUM ('student', 'faculty', 'guest');
 
 CREATE TABLE "users" (

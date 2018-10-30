@@ -1,5 +1,5 @@
 const db = require('./../db');
-
+/* Final Project */
 var Class = {
   getById: (id) => {
     const query = `
@@ -27,7 +27,7 @@ var Class = {
   },
   getByStudentId: (studentId) => {
     const query = `
-      SELECT 
+      SELECT
         cl.batch,
         cl.section,
         u.first_name ,
@@ -104,7 +104,7 @@ var Class = {
         id,
         batch,
         section
-      FROM classes 
+      FROM classes
       WHERE adviser=${facultyId}
     `;
     var promise = new Promise((resolve, reject) => {
