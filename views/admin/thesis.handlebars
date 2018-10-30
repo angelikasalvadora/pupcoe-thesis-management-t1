@@ -38,8 +38,8 @@
       <td>{{this.abstract}}</td>
       <td>{{this.group_id}}</td>
       {{!-- {{#if this.is_admin}}✓{{else}} {{/if}} --}}
-      <td>{{#if this.adviser_approved}}Approved {{else}}{{#if this.adviser_rejected}}Rejected {{else}}Pending {{/if}}{{/if}}</td>
-      <td>{{#if this.committee_approved}}Approved{{else}}Rejected{{/if}}</td>
+      <td>{{#if this.adviser_approved}}✓ {{else}}{{#if this.adviser_rejected}}X {{else}}Pending {{/if}}{{/if}}</td>
+      <td>{{#if this.committee_approved}}✓{{else}}X{{/if}}</td>
     </tr>
     {{/each}}
   </tbody>
